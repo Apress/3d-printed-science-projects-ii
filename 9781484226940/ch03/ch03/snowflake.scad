@@ -39,7 +39,7 @@ module grow(n = 1, branch = true, shrink = 0) {
    // create one hexagon
    circle(array[n] - shrink, $fn = 6);
    // then decide whether to continue with recursion
-   if(n < len(array) && (array[n] - shrink) > minwidth) {
+   if(n < len(array) - 1 && (array[n] - shrink) > minwidth) {
       translate([
          abs(array[n] - array[n + 1]) + 1 - shrink,
          0,
